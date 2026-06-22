@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif; /* Une police lisible */
+    background-color: #f4f4f4; /* Un gris très clair pour le fond */
+    color: #333333; /* Un gris foncé pour le texte principal */
+    margin: 0; /* Pas de marge par défaut sur le corps */
+    padding: 0; /* Pas de padding par défaut sur le corps */
+    line-height: 1.6; /* Améliore la lisibilité en espaçant les lignes de texte */
+}
+
+.chat-container {
+    width: 80%; /* Prend 80% de la largeur du parent */
+    max-width: 700px; /* Mais pas plus de 700px */
+    margin: 30px auto; /* Centre horizontalement et espace verticalement */
+    background-color: #ffffff; /* Fond blanc pour le conteneur */
+    padding: 20px; /* Espace interne de 20px */
+    border: 1px solid #dddddd; /* Bordure fine et claire */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Une ombre légère */
+    border-radius: 8px; /* Coins légèrement arrondis */
+}
+
+#chat-form {
+    display: flex; /* Rend le conteneur flexible */
+    margin-top: 20px; /* Espace au-dessus de la zone de saisie */
+}
+
+#user-input {
+    flex-grow: 1; /* Prend l'espace disponible */
+    padding: 10px; /* Espace interne */
+    border: 1px solid #ccc; /* Bordure simple */
+    border-radius: 4px; /* Coins légèrement arrondis */
+    margin-right: 10px; /* Espace à droite pour le bouton */
+    font-size: 16px; /* Taille de police */
+}
+
+#bouton {
+    background-color: #007bff; /* Couleur bleue vive */
+    color: white; /* Texte blanc */
+    border: none; /* Pas de bordure */
+    padding: 10px 15px; /* Espace interne */
+    border-radius: 4px; /* Coins arrondis */
+    cursor: pointer; /* Indique que le bouton est cliquable */
+    font-size: 16px; /* Taille de police */
+}
+
+#bouton:hover {
+    background-color: #0056b3; /* Un bleu plus foncé au survol */
+}
