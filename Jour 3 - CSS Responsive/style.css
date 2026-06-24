@@ -183,3 +183,37 @@ h1 {
                    une fois l'animation terminée.
     */
 }
+
+#chat-messages {
+    height: 400px; /* Hauteur fixe. Ajustez selon votre design. */
+
+    /*
+        Vous pourriez aussi utiliser max-height: 60vh;
+        60% de la hauteur du viewport.
+    */
+
+    overflow-y: auto; /* Affiche la scrollbar verticale si le contenu dépasse la hauteur */
+
+    border: 1px solid var(--chat-messages-border, #eee); /* Bordure */
+    margin-bottom: 15px; /* Espace avant la zone de saisie */
+    background-color: var(--chat-messages-bg, #ffffff);
+}
+
+/* Styles pour la scrollbar (Chrome, Edge, Safari, Opera) */
+#chat-messages::-webkit-scrollbar {
+    width: 10px; /* Largeur de la scrollbar */
+}
+
+#chat-messages::-webkit-scrollbar-track {
+    background: var(--bg-color-page, #f1f1f1); /* Couleur de fond de la piste */
+    border-radius: 10px; /* Coins arrondis pour la piste */
+}
+
+#chat-messages::-webkit-scrollbar-thumb {
+    background: #888; /* Couleur du pouce */
+    border-radius: 10px; /* Coins arrondis pour le pouce */
+}
+
+#chat-messages::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Couleur du pouce au survol */
+}
