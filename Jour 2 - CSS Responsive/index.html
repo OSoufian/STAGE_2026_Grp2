@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Permet au site de s'adapter correctement aux téléphones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chat IA</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/images/favicon.png">
+</head>
+
+<body>
+
+    <div class="chat-container">
+
+        <h1>Chat IA</h1>
+
+        <div id="chat-messages" class="chat-messages">
+
+            <!-- Messages d'exemple pour voir le rendu -->
+            <div class="message bot">
+                Bonjour, je suis ton assistant IA.
+            </div>
+
+            <div class="message user">
+                Salut, peux-tu m'aider ?
+            </div>
+
+            <div class="message bot">
+                Bien sûr, pose-moi ta question.
+            </div>
+
+        </div>
+
+        <div id="loading-indicator" class="loading-indicator" style="display: none;">
+            En attente de réponse...
+        </div>
+
+        <form id="chat-form" class="chat-form">
+            <input 
+                type="text" 
+                id="user-input" 
+                placeholder="Posez votre question..." 
+                autocomplete="off"
+            >
+
+            <button class="bouton" type="submit">
+                Envoyer
+            </button>
+        </form>
+
+    </div>
+
+    <script src="javascript/api.js" type="module"></script>
+
+</body>
+
+</html>
