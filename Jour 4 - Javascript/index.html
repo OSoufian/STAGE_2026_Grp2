@@ -27,8 +27,11 @@
 
         </div>
 
-        <div id="loading-indicator" class="loading-indicator" style="display: none;">
-            En attente de réponse...
+        <div id="loader" class="loader-hidden">
+            <!-- Information: la classe 'loader-hidden' sera utilisée par JS pour masquer
+            le loader -->
+            <div class="spinner"></div>
+            <p>L'IA est en train d'écrire...</p>
         </div>
 
         <form id="chat-form" class="chat-form">

@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const userInput = document.getElementById("user-input");
     const chatMessages = document.getElementById("chat-messages");
     const resetChatButton = document.getElementById("reset-chat-button");
+    const loaderElement = document.getElementById("loader");
 
 
     const OLLAMA_API_URL = "http://localhost:11434/api/chat";
@@ -25,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
         messageElement.appendChild(textElement);
 
         chatMessages.appendChild(messageElement);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
     }
 
     chatForm.addEventListener("submit", async function (event) {
@@ -35,6 +37,9 @@ document.addEventListener("DOMContentLoaded", function () {
         appendMessage("User", userMessage);
         userInput.value = "";
         userInput.focus();
+
+        toggleLoaderVisibility(true);
+
 
         try {
             conversationHistory.push({
@@ -80,6 +85,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 "Système",
                 "Désolé, une erreur est survenue lors de la communication avec l'IA."
             );
+        } finally {
+            toggleLoaderVisibility(false);
         }
     });
 
@@ -152,6 +159,16 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("Conversation réinitialisée.");
 
         localStorage.removeItem("conversationHistory");
+    }
+
+    function toggleLoaderVisibility(show) {
+        if (loaderElement) {
+            if (show) {
+                loaderElement.classList.remove("loader-hidden");
+            } else {
+                loaderElement.classList.add("loader-hidden");
+            }
+        }
     }
 
     loadConversationHistory();
